@@ -1,0 +1,21 @@
+.product {
+	height: 100px;
+	width: 200px;
+}
+.singleCard {
+
+}
+.products {
+	margin: 3%;
+}
+.arrowL, .arrowR {
+	height: 10%;
+	width: 10%;
+}
+.productLine {
+	width: 25rem;
+	height: 17rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
