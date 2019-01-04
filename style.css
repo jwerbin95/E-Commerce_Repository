@@ -1,21 +1,29 @@
+body {
+	background-image: url("./images/background.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
 .product {
-	height: 100px;
-	width: 200px;
+	height: 250px;
+	width: 240px;
 }
 .singleCard {
-
+	text-align: center;
 }
 .products {
 	margin: 3%;
 }
-.arrowL, .arrowR {
+.arrow{
 	height: 10%;
 	width: 10%;
 }
 .productLine {
 	width: 25rem;
-	height: 17rem;
+	height: 16rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+.cart {
+	text-align: center;
 }

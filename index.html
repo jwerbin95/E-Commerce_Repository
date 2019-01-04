@@ -5,8 +5,14 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="./style.css">
+	<script
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous">
+	</script>
 </head>
 <body>
+	<header>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		  <a class="navbar-brand" href="#">
 		  	<img src="./images/titleIcon.jpeg" alt="Title Icon" width="100" height="50" style="border-radius: 10px">
@@ -16,21 +22,36 @@
 		      <li class="nav-item active">
 		        <a class="nav-link" href="./index.html">Home<span class="sr-only">(current)</span></a>
 		      </li>
+		      <li class="nav-item active">
+		      	<a class="nav-link" href="#">About Us</a>
+		      </li>
 		      <li class="nav-item dropdown">
 		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		          Our Products
 		        </a>
 		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		          <a class="dropdown-item" href="#">Action</a>
-		          <a class="dropdown-item" href="#">Another action</a>
+		          <a class="dropdown-item" href="#">Boots</a>
+		          <a class="dropdown-item" href="#">Shirts</a>
+		          <a class="dropdown-item" href="#">Pants</a>
+		          <a class="dropdown-item" href="#">Socks</a>
+		          <a class="dropdown-item" href="#">Jackets</a>
+		          <a class="dropdown-item" href="#">Hats</a>
 		          <div class="dropdown-divider"></div>
-		          <a class="dropdown-item" href="#">Something else here</a>
+		          <a class="dropdown-item" href="#">Shipping Information</a>
 		        </div>
 		      </li>
 		      <li class="nav-item dropdown">
 		      	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		          <img src="./images/shoppingCart.png" alt="shoppingCart" width="30" height="30">
+		          <div class="dropdown-menu cartStorage cart" aria-labelledby="navbarDropdown">
+		          	<p class="dropdown-item"></p>
+		          	<div class="dropdown-divider"></div>
+		          	<span class="dropdown-item total">Total: </span>
+		          </div>
 		        </a>
+		      </li>
+		      <li class="nav-item active">
+		      	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Checkout</button>
 		      </li>
 		    </ul>
 		    <form class="form-inline my-2 my-lg-0">
@@ -38,20 +59,22 @@
 		      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 		    </form>
 		</nav>
+	</header>
 	<div class="container-fluid">
 		<div class="row">
 			    <div class="col-sm products">
 			      <div class="card" style="width: 25rem; height: 25rem">
 					  <div class="singleCard" alt="Card image cap">
 					  	<div class="productLine">
-					  		<img class="arrowL" src="./images/leftArrow.png">
-					  		<img class="arrowR" src="./images/rightArrow.png">
+					  		<img class="arrowL1 arrow" src="./images/leftArrow.png">
+					  		<div class="productImage1"></div>
+					  		<img class="arrowR1 arrow" src="./images/rightArrow.png">
 					  	</div>
 					  </div>
 					  <div class="card-body">
-					    <h5 class="card-title"></h5>
-					    <p class="card-text">Stylish Boots</p>
-					    <a href="#" class="btn btn-primary">Add to Cart</a>
+					    <h5 class="card-title pName1"></h5>
+					    <p class="card-text price1"></p>
+					    <button type="button" class="btn btn-primary cartButton1">Add To Cart</button>
 					  </div>
 					</div>
 			    </div>
@@ -59,14 +82,15 @@
 			      <div class="card" style="width: 25rem; height: 25rem">
 					  <div class="singleCard" alt="Card image cap">
 					  	<div class="productLine">
-					  		<img class="arrowL" src="./images/leftArrow.png">
-					  		<img class="arrowR" src="./images/rightArrow.png">
+					  		<img class="arrowL2 arrow" src="./images/leftArrow.png">
+					  		<div class="productImage2"></div>
+					  		<img class="arrowR2 arrow" src="./images/rightArrow.png">
 					  	</div>
 					  </div>
 					  <div class="card-body">
-					    <h5 class="card-title"></h5>
-					    <p class="card-text"></p>
-					    <a href="#" class="btn btn-primary">Add to Cart</a>
+					    <h5 class="card-title pName2"></h5>
+					    <p class="card-text price2"></p>
+					    <button type="button" class="btn btn-primary cartButton2">Add To Cart</button>
 					  </div>
 					</div>
 			    </div>
@@ -74,18 +98,139 @@
 			      <div class="card" style="width: 25rem; height: 25rem">
 					  <div class="singleCard" alt="Card image cap">
 					  	<div class="productLine">
-					  		<img class="arrowL" src="./images/leftArrow.png">
-					  		<img class="arrowR" src="./images/rightArrow.png">
+					  		<img class="arrowL3 arrow" src="./images/leftArrow.png">
+					  		<div class="productImage3"></div>
+					  		<img class="arrowR3 arrow" src="./images/rightArrow.png">
 					  	</div>
 					  </div>
 					  <div class="card-body">
-					    <h5 class="card-title"></h5>
-					    <p class="card-text"></p>
-					    <a href="#" class="btn btn-primary">Add to Cart</a>
+					    <h5 class="card-title pName3"></h5>
+					    <p class="card-text price3"></p>
+					    <button type="button" class="btn btn-primary cartButton3">Add To Cart</button>
+					  </div>
+					</div>
+			    </div>
+			    <div class="col-sm products">
+			      <div class="card" style="width: 25rem; height: 25rem">
+					  <div class="singleCard" alt="Card image cap">
+					  	<div class="productLine">
+					  		<img class="arrowL4 arrow" src="./images/leftArrow.png">
+					  		<div class="productImage4"></div>
+					  		<img class="arrowR4 arrow" src="./images/rightArrow.png">
+					  	</div>
+					  </div>
+					  <div class="card-body">
+					    <h5 class="card-title pName4"></h5>
+					    <p class="card-text price4"></p>
+					    <button type="button" class="btn btn-primary cartButton4">Add To Cart</button>
+					  </div>
+					</div>
+			    </div>
+			    <div class="col-sm products">
+			      <div class="card" style="width: 25rem; height: 25rem">
+					  <div class="singleCard" alt="Card image cap">
+					  	<div class="productLine">
+					  		<img class="arrowL5 arrow" src="./images/leftArrow.png">
+					  		<div class="productImage5"></div>
+					  		<img class="arrowR5 arrow" src="./images/rightArrow.png">
+					  	</div>
+					  </div>
+					  <div class="card-body">
+					    <h5 class="card-title pName5"></h5>
+					    <p class="card-text price5"></p>
+					    <button type="button" class="btn btn-primary cartButton5">Add To Cart</button>
+					  </div>
+					</div>
+			    </div>
+			    <div class="col-sm products">
+			      <div class="card" style="width: 25rem; height: 25rem">
+					  <div class="singleCard" alt="Card image cap">
+					  	<div class="productLine">
+					  		<img class="arrowL6 arrow" src="./images/leftArrow.png">
+					  		<div class="productImage6"></div>
+					  		<img class="arrowR6 arrow" src="./images/rightArrow.png">
+					  	</div>
+					  </div>
+					  <div class="card-body">
+					    <h5 class="card-title pName6"></h5>
+					    <p class="card-text price6"></p>
+					    <button type="button" class="btn btn-primary cartButton6">Add To Cart</button>
 					  </div>
 					</div>
 			    </div>
   			</div>
+  			<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLabel">Checkout</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			        <form>
+							  <div class="form-row">
+							  	<div class="form-group col-md-6">
+							      <label for="inputFirstName">First Name</label>
+							      <input type="text" class="form-control" id="inputFirstName" placeholder="First Name">
+							    </div>
+							    <div class="form-group col-md-6">
+							      <label for="inputLastName">Last Name</label>
+							      <input type="text" class="form-control" id="inputLastName" placeholder="Last Name">
+							    </div>
+							    <div class="form-group col-md-6">
+							      <label for="inputEmail4">Email</label>
+							      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+							    </div>
+							    <div class="form-group col-md-6">
+							      <label for="Phone">Phone Number</label>
+							      <input type="Phone" class="form-control" id="Number" placeholder="Phone Number">
+							    </div>
+							  </div>
+							  <div class="form-group">
+							    <label for="inputAddress">Address</label>
+							    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+							  </div>
+							  <div class="form-group">
+							    <label for="inputAddress2">Address 2</label>
+							    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+							  </div>
+							  <div class="form-row">
+							    <div class="form-group col-md-6">
+							      <label for="inputCity">City</label>
+							      <input type="text" class="form-control" id="inputCity">
+							    </div>
+							    <div class="form-group col-md-4">
+							      <label for="inputState">State</label>
+							      <select id="inputState" class="form-control">
+							        <option selected>Choose...</option>
+							        <option>...</option>
+							      </select>
+							    </div>
+							    <div class="form-group col-md-2">
+							      <label for="inputZip">Zip</label>
+							      <input type="text" class="form-control" id="inputZip">
+							    </div>
+							  </div>
+							  <div class="form-group">
+							    <div class="form-check">
+							      <input class="form-check-input" type="checkbox" id="gridCheck">
+							      <label class="form-check-label" for="gridCheck">
+							        Create Account
+							      </label>
+							    </div>
+							  </div>
+							  <button type="submit" class="btn btn-primary">Sign in</button>
+							</form>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+			        <button type="button" class="btn btn-primary">Complete Purchase</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
   		</div>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -93,4 +238,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="./app.js"></script>
 </body>
+
+
+
 </html>
